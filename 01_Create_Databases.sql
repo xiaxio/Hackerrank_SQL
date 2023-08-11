@@ -113,7 +113,8 @@ GO
 /*********************************************************************************************************************************************************/
 /* LOAD DATA FROM CSV FILE */
 BULK INSERT STATION
-FROM 'C:\Users\aroom\Documents\SQL Server Management Studio\STATION.csv'
+-- Make sure you download the STATION.csv file on this repository, and update the directory path for the following to work
+FROM 'C:\Users\...\Documents\SQL Server Management Studio\STATION.csv'
 WITH
 (
     FIRSTROW = 2,
@@ -124,7 +125,8 @@ WITH
 
 
 
-/* Tables creation commands
+/*********************************************************************************************************************************************************/
+/* Tables creation commands. Create OCCUPATION table
 We need these relations (tables):
  * OCUPATION (NAME, OCCUPATION)	
  * MUST INCLUDE CSV FILE: OCCUPATION.CSV
@@ -145,9 +147,11 @@ CREATE TABLE OCCUPATIONS (
 )
 GO
 
+/*********************************************************************************************************************************************************/
 /* LOAD DATA FROM CSV FILE */
 BULK INSERT OCCUPATIONS
-FROM 'C:\Users\aroom\Documents\SQL Server Management Studio\Occupation.csv'
+-- Make sure you download the OCCUPATION.csv file on this repository, and update the directory path for the following to work
+FROM 'C:\Users\...\Documents\SQL Server Management Studio\Occupation.csv'
 WITH
 (
     FIRSTROW = 2,
